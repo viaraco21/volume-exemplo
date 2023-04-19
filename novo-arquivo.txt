@@ -1,0 +1,10 @@
+arquivo de teste
+
+docker run -it -v "/Totvs/Docker/volume-exemplo:/var/www" ubuntu  
+# inicia o container mapeando o volume
+
+docker run -d -p 8080:3000 -v "/Totvs/Docker/volume-exemplo:/var/www" -w "/var/www" node npm start    
+# executando um app no node
+
+docker build -t raco1/volume-exemplo .      
+#criando imagem
